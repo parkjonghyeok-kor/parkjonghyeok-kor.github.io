@@ -17,7 +17,7 @@ header {
 
 /* 2. h1 설정 (하나만 남기세요) */
 h1 {
-    font-size: 50px;        /* 원하는 크기 */
+    font-size: 30px;        /* 원하는 크기 */
     font-weight: 800;        /* 원하는 두께 */
     margin: 0 0 25px 0; 
     letter-spacing: -0.02em;
