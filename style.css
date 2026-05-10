@@ -1,0 +1,42 @@
+/* 폰트 및 기본 여백 제거 */
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 80px; /* 헤더와 본문 사이의 넓은 여백 */
+}
+
+h1 { font-size: 1.2rem; font-weight: 400; letter-spacing: -0.02em; }
+
+nav ul { list-style: none; display: flex; gap: 20px; padding: 0; }
+nav a { text-decoration: none; color: #999; font-size: 0.9rem; transition: 0.3s; }
+nav a:hover { color: #000; }
+
+/* 갤러리 그리드 레이아웃 */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* 유동적인 그리드 */
+    gap: 40px;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(10%;) /* 약간의 차분한 느낌 부여 */
+}
+
+/* 모바일 대응 */
+@media (max-width: 600px) {
+    body { padding: 20px; }
+    header { flex-direction: column; gap: 20px; }
+    .gallery { grid-template-columns: 1fr; }
+}
