@@ -40,3 +40,55 @@ nav a:hover { color: #000; }
     header { flex-direction: column; gap: 20px; }
     .gallery { grid-template-columns: 1fr; }
 }
+
+/* About 페이지 스타일 */
+.about-container {
+    max-width: 600px; /* 글이 너무 길게 퍼지지 않게 너비 제한 */
+    margin: 0 auto;   /* 가운데 정렬 */
+    padding-top: 50px;
+    line-height: 1.8;  /* 줄 간격을 넓혀 가독성 향상 */
+    color: #333;
+}
+
+.bio {
+    margin-bottom: 80px; /* 소개글과 연락처 사이 여백 */
+    font-size: 1.1rem;
+}
+
+.contact h3 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #999; /* Contact 제목은 살짝 흐리게 처리하여 세련된 느낌 부여 */
+}
+
+.contact p {
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.contact a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #eee; /* 링크 아래에 얇은 밑줄 */
+    transition: 0.3s;
+}
+
+.contact a:hover {
+    border-bottom: 1px solid #333;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column; /* 사진을 세로로 한 장씩 나열 (작가 사이트 느낌) */
+    align-items: center;
+    gap: 100px; /* 사진 사이의 아주 넓은 간격 */
+    padding-top: 50px;
+}
+
+.item img {
+    max-width: 800px; /* 사진이 너무 커지지 않게 제한 */
+    width: 100%;
+    height: auto;
+}
