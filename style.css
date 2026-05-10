@@ -9,24 +9,35 @@ body {
 
 header {
     display: flex;
-    flex-direction: column; /* 세로 방향으로 나열 */
-    align-items: flex-start; /* 왼쪽 끝으로 정렬 */
-    margin-bottom: 60px;    /* 이름+메뉴 뭉치와 아래 본문 사이의 간격 */
+    flex-direction: column; /* 세로로 배치 (이름 아래 메뉴) */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    margin-bottom: 100px;    /* 본문과의 간격 확보 */
 }
 
 h1 {
-    font-size: 1.2rem;
+    font-size: 18px;
     font-weight: 400;
-    margin: 0 0 10px 0;    /* 아래쪽 메뉴와 살짝만 떨어지게 설정 */
+    margin-bottom: 10px; /* 이름과 메뉴 사이의 미세한 간격 */
     letter-spacing: -0.02em;
 }
 
 nav ul {
     list-style: none;
-    display: flex;          /* Work, About 같은 항목들은 가로로 나열 */
-    gap: 20px;              /* 메뉴 글자들 사이의 간격 */
     padding: 0;
     margin: 0;
+    display: flex; /* 메뉴 항목들은 가로로 나열 */
+    gap: 15px;     /* 메뉴 사이 간격 */
+}
+
+nav a {
+    text-decoration: none;
+    color: #999; /* 기본은 흐리게 */
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #000; /* 마우스 올리면 진하게 */
 }
 
 h1 { font-size: 1.2rem; font-weight: 400; letter-spacing: -0.02em; }
