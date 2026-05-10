@@ -15,14 +15,28 @@
             </ul>
         </nav>
     </header>
+    
+    <main class="gallery-container">
+    <div class="slides">
+        <img src="work06.jpg" class="slide active">
+        <img src="work08.jpg" class="slide">
+        <img src="work10.jpg" class="slide">
+        <img src="work11.jpg" class="slide">
+        <img src="work16.jpg" class="slide">
+        <img src="work19.jpg" class="slide">
+    </div>
+</main>
 
-    <main class="gallery">
-        <div class="item"><img src="work06.jpg" alt="Work 1"></div>
-        <div class="item"><img src="work08.jpg" alt="Work 2"></div>
-        <div class="item"><img src="work10.jpg" alt="Work 3"></div>
-        <div class="item"><img src="work11.jpg" alt="Work 4"></div>
-        <div class="item"><img src="work16.jpg" alt="Work 5"></div>
-        <div class="item"><img src="work19.jpg" alt="Work 6"></div>
-    </main>
+<script>
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    // 사진을 클릭하면 다음 사진으로 넘어가는 기능
+    document.querySelector('.gallery-container').addEventListener('click', () => {
+        slides[currentIndex].classList.remove('active'); // 현재 사진 숨기기
+        currentIndex = (currentIndex + 1) % slides.length; // 다음 인덱스로 (마지막이면 처음으로)
+        slides[currentIndex].classList.add('active'); // 다음 사진 보여주기
+    });
+</script>
 </body>
 </html>
