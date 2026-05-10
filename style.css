@@ -9,9 +9,24 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 80px; /* 헤더와 본문 사이의 넓은 여백 */
+    flex-direction: column; /* 세로 방향으로 나열 */
+    align-items: flex-start; /* 왼쪽 끝으로 정렬 */
+    margin-bottom: 60px;    /* 이름+메뉴 뭉치와 아래 본문 사이의 간격 */
+}
+
+h1 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 0 10px 0;    /* 아래쪽 메뉴와 살짝만 떨어지게 설정 */
+    letter-spacing: -0.02em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;          /* Work, About 같은 항목들은 가로로 나열 */
+    gap: 20px;              /* 메뉴 글자들 사이의 간격 */
+    padding: 0;
+    margin: 0;
 }
 
 h1 { font-size: 1.2rem; font-weight: 400; letter-spacing: -0.02em; }
